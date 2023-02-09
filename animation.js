@@ -79,11 +79,12 @@ StartButton.addEventListener('click', () => {
             }, 2500)
             setInterval(() => {
                 ElementInitial.style.display = "block"
+                document.querySelector('.text-initial').innerText = `A sua pontuação foi de ${this.points} pontos`
+                clearInterval(mov)
                 this.points = 0
                 points.innerText = this.points
-                clearInterval(mov)
 
-            }, 60000)
+            }, 10000)
         }
     }
     const PositionInitial = new RocketPosition(0, window.innerWidth, 100, window.innerHeight, window.innerWidth - 50, 0)
